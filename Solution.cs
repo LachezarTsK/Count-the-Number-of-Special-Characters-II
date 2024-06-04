@@ -9,11 +9,11 @@ public class Solution
     public int NumberOfSpecialChars(string word)
     {
         char[] wordArray = word.ToCharArray();
-        int[] lastIndexSmallLetters = createArrayLastIndexSmallLetters(wordArray);
-        return findNumberOfSpecialChars(wordArray, lastIndexSmallLetters);
+        int[] lastIndexSmallLetters = CreateArrayLastIndexSmallLetters(wordArray);
+        return FindNumberOfSpecialChars(wordArray, lastIndexSmallLetters);
     }
 
-    private int[] createArrayLastIndexSmallLetters(char[] wordArray)
+    private int[] CreateArrayLastIndexSmallLetters(char[] wordArray)
     {
         int[] lastIndexSmallLetters = new int[ALPHABET_SIZE];
         Array.Fill(lastIndexSmallLetters, VISITED);
@@ -30,7 +30,7 @@ public class Solution
         return lastIndexSmallLetters;
     }
 
-    private int findNumberOfSpecialChars(char[] wordArray, int[] lastIndexSmallLetters)
+    private int FindNumberOfSpecialChars(char[] wordArray, int[] lastIndexSmallLetters)
     {
         int numberOfSpecialChars = 0;
 
